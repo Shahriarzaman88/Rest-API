@@ -11,16 +11,21 @@ builder.Services.AddEndpointsApiExplorer();
 //builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<SubscriptionContext>(opt =>
-opt.UseInMemoryDatabase("Subscription"));
-
+opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+
+builder.Services.AddCors();
+
+
 if (app.Environment.IsDevelopment())
 {
     //app.UseSwagger();
     //app.UseSwaggerUI();
 }
+
+app.UseCors(opt => opt.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader());
 
 app.UseHttpsRedirection();
 

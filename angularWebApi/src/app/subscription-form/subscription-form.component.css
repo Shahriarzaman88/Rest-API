@@ -1,0 +1,48 @@
+
+
+.imgBackground {
+    height: 100%;
+    width: 100%;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.8;
+    z-index: 1;
+  }
+
+
+.border {
+    padding-bottom: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(246, 246, 246);
+}
+
+
+.text-x-larger {
+    background-color: rgb(49, 77, 237);
+    padding: 5px;
+    font-size:x-large;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    
+}
+.text-larger {
+    background-color: rgb(49, 77, 237);
+    padding: 5px;
+    font-size: large;
+    text-align: center;
+    color: white;
+}
+
+.btnColor {
+    background-color: rgb(85, 108, 238);
+}
+.btnColor:hover {
+    background-color: rgb(49, 77, 237);
+}

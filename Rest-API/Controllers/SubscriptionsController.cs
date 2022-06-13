@@ -21,7 +21,7 @@ namespace Rest_API.Controllers
         }
 
         // GET: api/Subscriptions
-        [HttpGet]
+        [HttpGet("GetAllUser")]
         public async Task<ActionResult<IEnumerable<Subscription>>> GetSubscription()
         {
           if (_context.Subscription == null)
@@ -32,7 +32,7 @@ namespace Rest_API.Controllers
         }
 
         // GET: api/Subscriptions/5
-        [HttpGet("{id}")]
+        [HttpGet("GetUserById/{id}")]
         public async Task<ActionResult<Subscription>> GetSubscription(int id)
         {
           if (_context.Subscription == null)

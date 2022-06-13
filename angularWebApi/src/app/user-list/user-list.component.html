@@ -1,0 +1,67 @@
+
+<div class="container">
+    <form class="form-group">
+        <div class="row">
+            <div class="col-lg-3">
+                <button class="btn btn-primary" (click)="getUserList()">Show User List</button>
+            </div>
+            
+            <!--<div class="col-lg-9" >
+                <label *ngFor="let users of userList">{{users.id}}</label>
+            </div> !-->
+           
+        </div>
+        <div class="row">
+            <table class="table table-dark table-striped table-hover" >
+                <thead>
+                  <tr>
+                    <th>Users ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Company</th>
+                  </tr>
+                </thead>
+                <tbody *ngFor="let users of userList" (click)="getUser(users.id)">
+                  <tr>
+                    <td>{{users.id}}</td>
+                    <td>{{users.firstName}}</td>
+                    <td>{{users.lastName}}</td>
+                    <td>{{users.email}}</td>
+                    <td>{{users.company}}</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+        </div>
+
+        <div class="row">
+            <table class="table table-dark table-striped table-hover" >
+                <thead>
+                  <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Company</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{{subsUser.firstName}}</td>
+                    <td>{{subsUser.lastName}}</td>
+                    <td>{{subsUser.email}}</td>
+                    <td>{{subsUser.company}}</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+
+
+
+        </div>
+    </form>
+
+    
+
+
+</div>

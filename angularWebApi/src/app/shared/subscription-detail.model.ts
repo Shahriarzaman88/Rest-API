@@ -1,7 +1,7 @@
 export class SubscriptionDetail {
-    Id: number = 0;
-    FirstName: string = '';
-    LastName: string = '';
-    Email: string = '';
-    Company: string = '';
+    id: number = 0;
+    firstName: string = '';
+    lastName: string = '';
+    email: string = '';
+    company: string = '';
 }
